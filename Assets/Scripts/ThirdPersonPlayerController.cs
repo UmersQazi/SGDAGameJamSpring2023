@@ -30,6 +30,11 @@ public class ThirdPersonPlayerController : MonoBehaviour
     public float slowMotionTimeScale;
     private float startTimeScale;
     private float startFixedDeltaTime;
+    public bool inSlowMotion;
+    public CinemachineSwitcher cameraStates;
+
+    [Header("Deluminator Data")]
+    public ParticleSystem lightOrbHitParticle;
 
 
 
@@ -63,14 +68,17 @@ public class ThirdPersonPlayerController : MonoBehaviour
 
         if(!readyToJump && !groundCheck)
         {
-            
+            inSlowMotion = true;
+            cameraStates.SwitchState();
             StartSlowMotion();
         }
 
         if (Input.GetKeyUp(jumpKey))
         {
             Debug.Log("Exiting Slow Motion");
+            cameraStates.SwitchState();
             StopSlowMotion();
+            inSlowMotion = false;
         }
 
     }
@@ -140,6 +148,17 @@ public class ThirdPersonPlayerController : MonoBehaviour
             rb.drag = groundDrag;
         else
             rb.drag = 0;
+
+        transform.forward = orientation.forward;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Light Orb"))
+        {
+            collision.gameObject.SetActive(false);
+            lightOrbHitParticle.Play();
+        }
     }
 
     private void OnDrawGizmos()
