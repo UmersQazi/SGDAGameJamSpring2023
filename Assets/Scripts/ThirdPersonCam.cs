@@ -21,6 +21,7 @@ public class ThirdPersonCam : MonoBehaviour
     public bool canDeluminate;
     public bool canHit;
     GameObject currentTarget;
+    public GameObject lightOrb;
 
     [SerializeField] GameManager gameMan;
 
@@ -50,9 +51,9 @@ public class ThirdPersonCam : MonoBehaviour
 
     public void Aim()
     {
-        RaycastHit hit;
+        RaycastHit hit, lightHit;
         canHit = Physics.Raycast(origin, direction, out hit, range, targetLayer);
-        canDeluminate = Physics.Raycast(origin, direction, out hit, range, lightLayer);
+        canDeluminate = Physics.Raycast(origin, direction, out lightHit, range, lightLayer);
 
         if (canHit && Input.GetKeyDown(KeyCode.E))
         {
@@ -64,7 +65,10 @@ public class ThirdPersonCam : MonoBehaviour
 
         if(canDeluminate && Input.GetKeyDown(KeyCode.Q))
         {
+            Instantiate(lightOrb, hit.transform.position, hit.transform.rotation);
+            
             gameMan.arrowCount++;
+
         }
 
         

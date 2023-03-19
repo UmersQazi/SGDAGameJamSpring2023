@@ -1047,9 +1047,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8588557956332496565, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6924161527643491540, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -6857787806310851146, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -5961992593329855473, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: -4946364142947838200, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
       propertyPath: m_Name
       value: GloowingTrees
+      objectReference: {fileID: 0}
+    - target: {fileID: 3657302770209574435, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69db7bcf1339e104db24e1188e8b54e8, type: 3}
@@ -1251,7 +1275,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 730412912}
-  m_LocalRotation: {x: 0.11559233, y: -0.00000001709104, z: 0.0000000019889252, w: 0.99329674}
+  m_LocalRotation: {x: 0.11559233, y: 0.000000017091047, z: -0.0000000019889261, w: 0.99329674}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1511,7 +1535,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.11559233, y: -0.000000034182086, z: 0.0000000039778514, w: 0.9932968}
+  m_LocalRotation: {x: 0.11559233, y: 0.00000003418209, z: -0.000000003977852, w: 0.9932968}
   m_LocalPosition: {x: 13.44, y: -20.179998, z: 17.260002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1592,9 +1616,10 @@ MonoBehaviour:
     m_Bits: 128
   lightLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   canDeluminate: 0
   canHit: 0
+  lightOrb: {fileID: 0}
   gameMan: {fileID: 1579218550}
 --- !u!1 &977462595
 GameObject:
