@@ -37,7 +37,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timerText.text = timeLimit.ToString();
+        timerText.text = "Time:" + timeLimit.ToString();
         timeLimit -= Time.deltaTime;
         arrowText.text = arrowCount.ToString();
 

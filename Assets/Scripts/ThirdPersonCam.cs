@@ -65,7 +65,7 @@ public class ThirdPersonCam : MonoBehaviour
 
         if(canDeluminate && Input.GetKeyDown(KeyCode.Q))
         {
-            Instantiate(lightOrb, hit.transform.position, hit.transform.rotation);
+            Instantiate(lightOrb, lightHit.transform.position, lightHit.transform.rotation);
             
             gameMan.arrowCount++;
 

@@ -20,6 +20,7 @@ public class ThirdPersonPlayerController : MonoBehaviour
     public bool groundCheck;
 
     [Header("Jumping Data")]
+    public GameObject playerObj;
     public float jumpForce;
     public float jumpCooldown;
     public float airMultiplier;
@@ -37,6 +38,10 @@ public class ThirdPersonPlayerController : MonoBehaviour
     public ParticleSystem lightOrbHitParticle;
 
 
+    [Header("Creature Data")]
+    [SerializeField] private Animator creatureAnimator;
+    [SerializeField] private Vector3 playerVelocity;
+
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +55,31 @@ public class ThirdPersonPlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        playerVelocity = rb.velocity;
         MovePlayer();
+
+        if(horizontalInput == 0 && verticalInput == 0)
+        {
+            creatureAnimator.SetBool("canRoll", false);
+            creatureAnimator.SetBool("canRollHorizontal", false);
+        }
+        else if(horizontalInput != 0 && verticalInput == 0)
+        {
+            creatureAnimator.SetBool("canRoll", false);
+            creatureAnimator.SetBool("canRollHorizontal", true);
+
+        }else if(horizontalInput != 0 && verticalInput != 0)
+        {
+            creatureAnimator.SetBool("canRoll", true);
+            creatureAnimator.SetBool("canRollHorizontal", false);
+
+        }
+        else if(horizontalInput == 0 && verticalInput != 0)
+        {
+            creatureAnimator.SetBool("canRoll", true);
+            creatureAnimator.SetBool("canRollHorizontal", false);
+        }
+
     }
 
     private void MyInput()
