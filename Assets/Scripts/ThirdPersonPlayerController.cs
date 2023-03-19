@@ -28,7 +28,7 @@ public class ThirdPersonPlayerController : MonoBehaviour
 
     [Header("Slow Motion")]
     public float slowMotionTimeScale;
-    private float startTimeScale;
+    public float startTimeScale;
     private float startFixedDeltaTime;
     public bool inSlowMotion;
     public CinemachineSwitcher cameraStates;
@@ -63,13 +63,14 @@ public class ThirdPersonPlayerController : MonoBehaviour
             readyToJump = false;
             Jump();
             Invoke(nameof(ResetJump), jumpCooldown);
-            
+            cameraStates.SwitchState();
+
         }
 
-        if(!readyToJump && !groundCheck)
+        if(Input.GetKey(jumpKey) &&!readyToJump && !groundCheck)
         {
             inSlowMotion = true;
-            cameraStates.SwitchState();
+            
             StartSlowMotion();
         }
 
