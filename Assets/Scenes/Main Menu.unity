@@ -156,10 +156,10 @@ RectTransform:
   m_Father: {fileID: 1971341217}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 277, y: 33}
-  m_SizeDelta: {x: 209.64, y: 25}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -26, y: 65.7}
+  m_SizeDelta: {x: 238.36, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &185320714
 MonoBehaviour:
@@ -183,10 +183,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe71f0d995410114a90a3ea297d57a9d, type: 3}
-    m_FontSize: 16
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -239,7 +239,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 442, y: -35}
-  m_SizeDelta: {x: 198.3, y: 138.44}
+  m_SizeDelta: {x: 198.29999, y: 138.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &227976502
 MonoBehaviour:
@@ -276,11 +276,16 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Move - WASD
 
-    Jump - Spacebar
+    Jump - Hold Spacebar
 
     Shoot - E
 
-    Gather Light - Q'
+    Gather Light
+    - Q
+
+    Pause - P
+
+    Quit - Esc'
 --- !u!222 &227976503
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1317,6 +1322,86 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083235887}
   m_CullTransparentMesh: 1
+--- !u!1 &1166634669
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1166634670}
+  - component: {fileID: 1166634672}
+  - component: {fileID: 1166634671}
+  m_Layer: 5
+  m_Name: Help Menu Text (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1166634670
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166634669}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.3255813, y: 1.1904761, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1971341217}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3, y: -46.5}
+  m_SizeDelta: {x: 249.09998, y: 41.67}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1166634671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166634669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: fe71f0d995410114a90a3ea297d57a9d, type: 3}
+    m_FontSize: 19
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Soundtrack by Craze Music Productions
+--- !u!222 &1166634672
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1166634669}
+  m_CullTransparentMesh: 1
 --- !u!1 &1294734304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2012,7 +2097,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -2221,10 +2306,10 @@ RectTransform:
   m_Father: {fileID: 1971341217}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.5}
-  m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: -23}
-  m_SizeDelta: {x: 233.1, y: 25}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -3, y: 9.7}
+  m_SizeDelta: {x: 249.09998, y: 41.67}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779256956
 MonoBehaviour:
@@ -2248,7 +2333,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: fe71f0d995410114a90a3ea297d57a9d, type: 3}
-    m_FontSize: 16
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -2259,7 +2344,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Animations and Model planning - Hummad Sheikh
+  m_Text: Tree & Target Concept, Light Orb Material - Hummad Sheikh
 --- !u!222 &1779256957
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2466,6 +2551,7 @@ RectTransform:
   - {fileID: 185320713}
   - {fileID: 1779256955}
   - {fileID: 1365063997}
+  - {fileID: 1166634670}
   m_Father: {fileID: 575259395}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2548,7 +2634,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -490, y: -35}
-  m_SizeDelta: {x: 198.3, y: 138.44}
+  m_SizeDelta: {x: 198.29999, y: 138.44}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2061262435
 MonoBehaviour:
@@ -2627,9 +2713,9 @@ RectTransform:
   m_Father: {fileID: 436945406}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.302393, y: 106.8}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -9.302393, y: -63.199997}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2062412249
@@ -2745,7 +2831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Bow & Lumo
+  m_Text: Lumo-Cannon
 --- !u!222 &2071282227
 CanvasRenderer:
   m_ObjectHideFlags: 0

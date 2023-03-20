@@ -8,7 +8,7 @@ public class CinemachineSwitcher : MonoBehaviour
     //[SerializeField] private InputAction action;
 
     private Animator animator;
-    private bool inGroundCamera = true;
+    public bool inGroundCamera = true;
     public ThirdPersonPlayerController player;
 
     // Start is called before the first frame update

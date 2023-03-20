@@ -32,11 +32,12 @@ public class ThirdPersonCam : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
+
+    private void LateUpdate()
     {
         origin = transform.position;
         direction = transform.forward;
-        
+
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
         orientation.forward = viewDir.normalized;
 
@@ -45,6 +46,16 @@ public class ThirdPersonCam : MonoBehaviour
         Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
         Aim();
+    }
+
+    private void FixedUpdate()
+    {
+        
+    }
+
+    private void Update()
+    {
+        
 
         
     }
@@ -54,6 +65,7 @@ public class ThirdPersonCam : MonoBehaviour
         RaycastHit hit, lightHit;
         canHit = Physics.Raycast(origin, direction, out hit, range, targetLayer);
         canDeluminate = Physics.Raycast(origin, direction, out lightHit, range, lightLayer);
+
 
         if (canHit && Input.GetKeyDown(KeyCode.E))
         {
@@ -65,7 +77,10 @@ public class ThirdPersonCam : MonoBehaviour
 
         if(canDeluminate && Input.GetKeyDown(KeyCode.Q))
         {
-            Instantiate(lightOrb, lightHit.transform.position, lightHit.transform.rotation);
+            lightHit.collider.gameObject.GetComponent<LightTree>().MakeLight(lightHit.transform.position,
+                lightHit.transform.rotation);
+
+            //Instantiate(lightOrb, lightHit.transform.position, lightHit.transform.rotation);
             
             gameMan.arrowCount++;
 
