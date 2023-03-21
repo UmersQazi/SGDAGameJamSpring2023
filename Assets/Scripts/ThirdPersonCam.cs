@@ -72,6 +72,7 @@ public class ThirdPersonCam : MonoBehaviour
             currentTarget = hit.collider.gameObject;
             currentTarget.SetActive(false);
             gameMan.arrowCount -= 1;
+            gameMan.targetCount--;
             //Debug.Log("Found Target!");
         }
 

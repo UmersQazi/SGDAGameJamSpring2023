@@ -43,7 +43,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(targetCount <= 0)
+
+
+        if(GameObject.FindGameObjectWithTag("Target") == null)
         {
             gameWon = true;
             WinGame();
@@ -64,7 +66,7 @@ public class GameManager : MonoBehaviour
         {
             timeLimit = 0;
         }
-        arrowText.text = arrowCount.ToString();
+        arrowText.text = "Ammo: " + arrowCount.ToString();
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -99,7 +101,7 @@ public class GameManager : MonoBehaviour
     {
         reticleUI.SetActive(false);
         reticleUI2.SetActive(false);
-        timeUpPanel.SetActive(true);
+        pausePanel.SetActive(true);
         Time.timeScale = 0;
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;

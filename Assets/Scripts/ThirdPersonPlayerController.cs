@@ -65,6 +65,7 @@ public class ThirdPersonPlayerController : MonoBehaviour
         readyToJump = true;
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
+        Time.timeScale = 1;
         startTimeScale = Time.timeScale;
         startFixedDeltaTime = Time.fixedDeltaTime;
     }

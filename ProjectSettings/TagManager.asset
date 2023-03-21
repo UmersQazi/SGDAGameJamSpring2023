@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Light Orb
   - Creature
+  - Target
   layers:
   - Default
   - TransparentFX
